@@ -53,7 +53,7 @@ class FullNavigation extends React.Component {
               expanded={this.state.expanded}
               toggleExpanded={this.toggleExpanded}
             />
-            <h4 className="d-none d-lg-block" style={{margin: 0, color: "#333"}}><a href="/">David Ilzhöfer</a></h4>
+            <h4 className="home-link" style={{margin: 0, color: "#333"}}><a href="/">David Ilzhöfer</a></h4>
             
             {/* <SearchIcon toggleSearch={toggleSearch} /> */}
           </div>

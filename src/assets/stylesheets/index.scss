@@ -3411,3 +3411,15 @@ img.cookie-img {
 #navigation {
   min-height: 75px;
 }
+
+.home-link  {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bg-dark-image .navbar-toggler .icon-bar {
+  color: #222 !important;
+  background: #222;
+}
