@@ -114,8 +114,8 @@ class GalleryImageComponent extends React.Component {
     return (
       
       <div id="gallery_image_widget" className={classNames}>
-        {/* <Scrivito.ImageTag id="gallery_image_widget__img" className={classNames} content={this.props.widget} attribute="mainImage" tag="img" onClick={() => this.setState({ lightboxIsOpen: true })}/> */}
-        <img className="lazyload" id="gallery_image_widget__img" data-src={mainImg.src}/>
+        <Scrivito.ImageTag id="gallery_image_widget__img" className={classNames} content={this.props.widget} attribute="mainImage" tag="img" onClick={() => this.setState({ lightboxIsOpen: true })}/>
+        {/* <img className="lazyload" id="gallery_image_widget__img" data-src={mainImg.src}/> */}
         <span id="gallery_image_widget__text_span">
           <Scrivito.ContentTag content={this.props.widget} attribute="title" tag="h4"/>
           <p> &nbsp; -  &nbsp;</p>
