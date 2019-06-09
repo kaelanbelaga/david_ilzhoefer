@@ -5,6 +5,7 @@ import isImage from "../../utils/isImage";
 import fullScreenWidthPixels from "../../utils/fullScreenWidthPixels";
 import TagList from "../../Components/TagList";
 import { stringify } from "querystring";
+import 'lazysizes';
 
 
 
@@ -95,6 +96,9 @@ class GalleryImageComponent extends React.Component {
     const { widget } = this.props;
     const imgs = widget.get("extraImages");
     const lightboxImages = imgs.map(image => lightboxOptions(image));
+
+    const mainImg1 = widget.get("mainImage");
+    const mainImg = mainImageOptions(mainImg1)
     
     const classNames = [
       
@@ -110,7 +114,8 @@ class GalleryImageComponent extends React.Component {
     return (
       
       <div id="gallery_image_widget" className={classNames}>
-        <Scrivito.ImageTag id="gallery_image_widget__img" className={classNames} content={this.props.widget} attribute="mainImage" tag="img" onClick={() => this.setState({ lightboxIsOpen: true })}/>
+        {/* <Scrivito.ImageTag id="gallery_image_widget__img" className={classNames} content={this.props.widget} attribute="mainImage" tag="img" onClick={() => this.setState({ lightboxIsOpen: true })}/> */}
+        <img className="lazyload" id="gallery_image_widget__img" data-src={mainImg.src}/>
         <span id="gallery_image_widget__text_span">
           <Scrivito.ContentTag content={this.props.widget} attribute="title" tag="h4"/>
           <p> &nbsp; -  &nbsp;</p>
@@ -169,6 +174,18 @@ function lightboxOptions(galleryImageWidget) {
   return {
     src: srcUrl,
     thumbnail: srcUrl,
+    alt,
+  };
+}
+
+function mainImageOptions(galleryImageWidget) {
+
+  const binary = galleryImageWidget.get("blob");
+  const srcUrl = binary.optimizeFor({ width: fullScreenWidthPixels() }).url();
+  const alt = galleryImageWidget.get("alternativeText");
+
+  return {
+    src: srcUrl,
     alt,
   };
 }
