@@ -144,7 +144,7 @@ class Navigation extends React.Component {
           topSectionStyle.background = [
             {
               image:
-                "linear-gradient(rgba(46, 53, 60, 0.7), rgba(46, 53, 60, 0.7))",
+                "linear-gradient(rgba(46, 53, 60, 0), rgba(46, 53, 60, 0))",
             },
           ];
           if (!isVideoObj(backgroundImage)) {

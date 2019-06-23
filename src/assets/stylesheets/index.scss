@@ -760,9 +760,9 @@ section.navbar-fixed {
   height: 75px;
   position: relative;
   padding: 25px 15px !important;
-  text-transform: uppercase;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
+  font-family: "noto-sans", sans-serif;
   color: $theme-greydark;
   display: inline-block;
 }
@@ -855,7 +855,7 @@ section.navbar-fixed {
 /* .scrolled.bg-dark-image .navbar-brand { background: $logo-dark no-repeat center center / contain; } */
 
 .scrolled .navbar {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 1);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 .scrolled.bg-dark-image .navbar-nav > li > a {
@@ -3409,7 +3409,7 @@ img.cookie-img {
 }
 
 #navigation {
-  min-height: 75px;
+  height: 65px;
 }
 
 .home-link  {
@@ -3417,6 +3417,9 @@ img.cookie-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-weight: 600;
+font-size: 16px;
+  text-transform: uppercase;
 }
 
 .bg-dark-image .navbar-toggler .icon-bar {
