@@ -1,6 +1,8 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import NavChild from "./NavChild";
+import { Link as ScrollLink } from "react-scroll";
+
 
 
 class Nav extends React.Component {
@@ -42,8 +44,20 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <Scrivito.ChildListTag
-        className="nav navbar-nav navbar-right"
+      <ul className="nav navbar-nav navbar-right">
+      <li className="nav-item nav-hover">
+        {/* <a target="_self" href="/#big_gallery" className="nav-link">arbeiten</a> */}
+        <ScrollLink
+      to="nextSection"
+      smooth
+      duration={500}
+      className="nav-link"
+    >
+      arbeiten
+    </ScrollLink>
+      </li>
+<Scrivito.ChildListTag
+        className="nav navbar-nav"
         parent={Scrivito.Obj.root()}
         renderChild={child => (
           <NavChild
@@ -56,6 +70,8 @@ class Nav extends React.Component {
           />
         )}
       />
+      </ul>
+      
     );
   }
 }

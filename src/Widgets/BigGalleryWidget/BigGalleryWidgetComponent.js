@@ -36,10 +36,10 @@ class BigGalleryComponent extends React.Component {
     const { photoIndex, isOpen } = this.state;
     const { widget } = this.props;
 
-
+    console.log(this.props.widget.id())
     return ( 
       
-      <div className="big_gallery_widget__wrapper">
+      <div className="big_gallery_widget__wrapper" id="big_gallery">
 
 
       <TagList

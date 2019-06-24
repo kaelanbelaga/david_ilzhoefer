@@ -760,7 +760,7 @@ section.navbar-fixed {
   height: 75px;
   position: relative;
   padding: 25px 15px !important;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 16px;
   font-family: "noto-sans", sans-serif;
   color: $theme-greydark;
@@ -856,7 +856,6 @@ section.navbar-fixed {
 
 .scrolled .navbar {
   background: rgba(255, 255, 255, 1);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 .scrolled.bg-dark-image .navbar-nav > li > a {
   color: $theme-greydark !important;
@@ -1574,14 +1573,13 @@ section.navbar-fixed {
   max-height: 800px;
   max-width: 800px;
   opacity: 1;
-  @include transition(all 0.2s ease-in-out);
+  @include transition(all 0.2s ease-in-out, display 0.4s ease-in-out);
   @include transition-performance;
 }
 .squeezed {
   transform: translateX(50%);
   opacity: 0;
-  max-width: 0;
-  max-height: 0;
+  display: none;
 }
 
 /* timeline for blog
@@ -3417,12 +3415,18 @@ img.cookie-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-weight: 600;
-font-size: 16px;
+  font-weight: bold;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
 .bg-dark-image .navbar-toggler .icon-bar {
   color: #222 !important;
   background: #222;
+}
+
+.nav-hover:hover {
+  background: $nav-hover !important;
+  color: #222 !important;
+  cursor: pointer;
 }
