@@ -45,8 +45,8 @@ class Nav extends React.Component {
   render() {
     return (
       <ul className="nav navbar-nav navbar-right">
-      <li className="nav-item nav-hover">
-        {/* <a target="_self" href="/#big_gallery" className="nav-link">arbeiten</a> */}
+      {/* <li className="nav-item nav-hover">
+         <a target="_self" href="/#big_gallery" className="nav-link">arbeiten</a> 
         <ScrollLink
       to="nextSection"
       smooth
@@ -55,7 +55,7 @@ class Nav extends React.Component {
     >
       arbeiten
     </ScrollLink>
-      </li>
+      </li> */}
 <Scrivito.ChildListTag
         className="nav navbar-nav"
         parent={Scrivito.Obj.root()}
