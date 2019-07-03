@@ -6,13 +6,6 @@ import fullScreenWidthPixels from "../../utils/fullScreenWidthPixels";
 import TagList from "../../Components/TagList";
 import { stringify } from "querystring";
 
-const tags=[]
-for (let i= 0; i < 10; i++) {
-  let x = 2000 + i
-  tags.push(x.toString())
-}
-
-
 class BigGalleryComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -80,5 +73,5 @@ function allTags(images) {
   const uniqueTags = [...new Set(tags)];
 
   // sort tags
-  return uniqueTags.sort();
+  return uniqueTags.sort().reverse();
 }

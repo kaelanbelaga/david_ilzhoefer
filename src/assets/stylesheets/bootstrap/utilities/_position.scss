@@ -28,6 +28,7 @@ $positions: static, relative, absolute, fixed, sticky;
 }
 
 .sticky-top {
+  -webkit-position: sticky;
   @supports (position: sticky) {
     position: sticky;
     top: 0;
