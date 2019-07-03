@@ -18,7 +18,7 @@ function TagList({ showTags, tags, currentTag, setTag }) {
   };
 
   return (
-    <div className="nav sticky-top sidebar" >
+    <div className="nav general-sticky sidebar" >
       <div className="nav d-none d-lg-block">
         <ul className="nav nav-pills flex-column align-middle bg-nav">
           <li

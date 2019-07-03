@@ -3430,3 +3430,10 @@ img.cookie-img {
   color: #222 !important;
   cursor: pointer;
 }
+
+.general-sticky {
+  
+  position: sticky;
+  -webkit-position: sticky;
+  top: 75px;
+}
