@@ -31,19 +31,13 @@ const textStyle = {
 }
 
 
-const tags = []
 
-for (let i= 0; i < 10; i++) {
-  let x = 2000 + i
-  tags.push(x.toString())
-}
- 
 class GalleryImageComponent extends React.Component { 
   constructor(props) {
     super(props);
  
     this.state = {
-      photoIndex: 0,
+      currentImage: 0,
       isOpen: false,
       lightboxIsOpen: false,
     };
@@ -117,11 +111,10 @@ class GalleryImageComponent extends React.Component {
         <Scrivito.ImageTag id="gallery_image_widget__img" className={classNames} content={this.props.widget} attribute="mainImage" tag="img" onClick={() => this.setState({ lightboxIsOpen: true })}/>
         {/* <img className="lazyload" id="gallery_image_widget__img" data-src={mainImg.src}/> */}
         <span id="gallery_image_widget__text_span">
-          <Scrivito.ContentTag content={this.props.widget} attribute="title" tag="h4" style={{fontWeight: "bold",
+          <Scrivito.ContentTag content={this.props.widget} attribute="title" tag="h4" className={classNames} style={{fontWeight: "bold",
                                                                                               fontSize: "16px",
                                                                                               textTransform: "uppercase"}}/>
-          <p> &nbsp; -  &nbsp;</p>
-          <Scrivito.ContentTag content={this.props.widget} attribute="subtitle" tag="p"/>
+          <Scrivito.ContentTag content={this.props.widget} attribute="subtitle" className={classNames} tag="p"/>
         </span>
 
         <Lightbox

@@ -9,11 +9,11 @@ const CurrentPageMetadata = Scrivito.connect(() => {
   let title = "";
   let meta = [];
   const links = [
-    {
-      rel: "shortcut icon",
-      type: "image/png",
-      href: favicon,
-    },
+    // {
+    //   rel: "shortcut icon",
+    //   type: "image/png",
+    //   href: favicon,
+    // },
   ];
 
   const page = Scrivito.currentPage();
