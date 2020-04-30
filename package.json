@@ -42,7 +42,7 @@
     "fuse.js": "^3.4.4",
     "generator-scrivito": "file:generator-scrivito",
     "is-empty": "^1.2.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jsontoxml": "^1.0.1",
     "lazysizes": "^5.1.0",
     "lodash-es": "^4.17.11",
